@@ -7,6 +7,7 @@ import Swiper from "react-native-swiper";
 import Carousel, { Pagination } from "react-native-snap-carousel";
 import apiConfig from "../util/api/apiConfig";
 import { category } from "../util/api/tmdpApi";
+import { useTranslation } from "react-i18next";
 const { width } = Dimensions.get("window");
 
 const HeroSlide = ({ items, onIndexChange }) => {
@@ -14,6 +15,7 @@ const HeroSlide = ({ items, onIndexChange }) => {
   const navigation = useNavigation();
   const imgWidth = width - 48;
   const carousel = useRef();
+  const { t, i18n } = useTranslation();
 
   const renderItem = ({ item, index }) => {
     return (
@@ -40,7 +42,7 @@ const HeroSlide = ({ items, onIndexChange }) => {
           </View>
           <View className="flex-1">
             <Text className="text-slate-700 text-[18px] font-semibold">
-              Continue Watching
+              {t("WatchNow")}
             </Text>
             <Text className="text-slate-200 text-[20px]" numberOfLines={1}>
               {item.title}

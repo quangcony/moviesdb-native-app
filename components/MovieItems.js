@@ -75,6 +75,7 @@ const MovieItems = ({ mediaType, timeWindow }) => {
         data={items}
         numColumns={4}
         // listMode="SCROLLVIEW"
+        scrollEnabled={false}
         columnWrapperStyle={{
           justifyContent: "space-between",
           marginBottom: 10,
