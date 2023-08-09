@@ -52,18 +52,18 @@ const HomeScreen = ({ navigation }) => {
       <Header type={movieType.upcoming} />
       {/* End Head */}
 
-      {/* Trending Movies */}
+      {/* Now playing Movies */}
       <View className="mt-8 pl-6">
         <View className="flex-row items-center">
           <Text className="text-slate-200 text-[20px] font-normal mr-2">
             {/* Pupular Movies */}
-            {t("PopularMovies")}
+            {t("NowPlayingMovies")}
           </Text>
           <TouchableOpacity
             onPress={() =>
               navigation.navigate("Movies", {
                 category: category.movie,
-                type: movieType.popular,
+                type: movieType.now_playing,
               })
             }
           >
